@@ -200,14 +200,8 @@ a {
   border-radius: 50px;
 }
 .herdiv2 {
-  margin: 50px;
+  margin: 50px 50px 50px 0;
   /* height: 100%; */
-  text-align: end;
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  bottom: 5px;
 }
 .herosubhead {
   /* margin: 50px; */
@@ -300,7 +294,8 @@ a {
         font-family: "Anton", sans-serif;
         color: #00a257;
         font-weight: 400;
-        font-size: 20px
+        font-size: 20px;
+        padding-top: 0;
       }
   }
 
