@@ -8,12 +8,12 @@
   padding: 0;
 }
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-  body{
-    overflow-x: hidden;
-  }
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
 .header span,
 ul li a {
   font-family: "Anton", sans-serif;
@@ -187,14 +187,98 @@ a {
 
 /* hero section */
 
-.herodiv{
-    /* background-color: #00a257; */
-    background: linear-gradient(to bottom, #ffffff 10%, #00a257 100%);
-    height: 100vh;
+.herodiv {
+  /* background-color: #00a257; */
+  background: linear-gradient(to bottom, #ffffff 10%, #00a257 100%);
+  height: 100vh;
 }
+.herodivinner {
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0px 50px 50px 50px;
+  display: flex;
+  border-radius: 50px;
+}
+.herdiv2 {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 505px;
+}
+.herosubhead {
+  /* margin: 50px; */
+  font-family: "Anton", sans-serif;
+  color: #00a257;
+  font-weight: 400;
+}
+.herohead {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 400;
+  line-height: 90px;
+  font-size: 80px;
+  width: 195px;
+  margin: 50px;
+  position: relative;
+  color: white;
+  -webkit-text-stroke: 0.1vw #00a257;
+  text-transform: uppercase;
+}
+.herohead::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #00a257;
+  -webkit-text-stroke: 0vw #00a257;
+  border-right: 0.2vw solid #00a257;
+  overflow: hidden;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+    .herohead {
+      font-family: "Anton", sans-serif;
+      letter-spacing: 4px;
+      font-weight: 400;
+      line-height: 50px;
+      font-size: 40px;
+      width: 110px;
+      margin: 50px;
+      height: 300px;
+      position: relative;
+      color: white;
+      -webkit-text-stroke: 0.1vw #00a257;
+      text-transform: uppercase;
+    }
+    .herodivinner {
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 0px 50px 50px 50px;
+        display: flex;
+        border-radius: 50px;
+        flex-direction: column
+      }
+      .herdiv2 {
+        margin: 50px;
+        display: block;
+        flex-direction: column;
+      }
+  }
 
 /* hero ends */
-
 
 /* cards */
 
@@ -202,19 +286,16 @@ a {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 .bookses {
-    padding-top: 50px;
+  padding-top: 50px;
+  -webkit-text-stroke: 0.1vw #00a257;
   font-family: "Anton", sans-serif;
   color: white;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   letter-spacing: 4px;
-  /* border: 1px solid #8C2F39; */
-  /* -webkit-text-stroke: 5px solid #8C2F39; */
-  /* transition: 0.3s ease-in-out; */
-  text-shadow: 1px 0 #00a257, -1px 0 #00a257, 0 1px #00a257, 0 -1px #00a257,
-    1px 1px #00a257, -1px -1px #00a257, 1px -1px #00a257, -1px 1px #00a257;
+  text-shadow: none;
 }
 * {
   margin: 0;
@@ -224,7 +305,7 @@ a {
 }
 .cardsbody {
   /* min-height: 100vh; */
-  padding: 50px 0;
+  padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
