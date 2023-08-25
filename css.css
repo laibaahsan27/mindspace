@@ -263,6 +263,19 @@ a {
       -webkit-text-stroke: 0.1vw #00a257;
       text-transform: uppercase;
     }
+    .herohead::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: #00a257;
+        -webkit-text-stroke: 0vw #00a257;
+        border-right: 0.5vw solid #00a257;
+        overflow: hidden;
+        animation: animate 2s linear infinite;
+      }
     .herodivinner {
         background-color: white;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
