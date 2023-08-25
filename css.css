@@ -13,6 +13,7 @@ html {
 }
 body {
   overflow-x: hidden;
+  background: linear-gradient(to bottom, #ffffff 10%, #00a257 100%);
 }
 .header span,
 ul li a {
@@ -66,8 +67,6 @@ a {
 }
 .nav-links li a:hover {
   color: white;
-  /* border: 1px solid #8C2F39; */
-  /* -webkit-text-stroke: 5px solid #8C2F39; */
   transition: 0.3s ease-in-out;
   text-shadow: 1px 0 #00a257, -1px 0 #00a257, 0 1px #00a257, 0 -1px #00a257,
     1px 1px #00a257, -1px -1px #00a257, 1px -1px #00a257, -1px 1px #00a257;
@@ -117,7 +116,6 @@ a {
     color: #b23a48;
   }
   nav {
-    /* display: none; */
     width: 100%;
     height: 100vh;
     background-color: white;
@@ -148,7 +146,6 @@ a {
     margin-top: 20px;
   }
   .nav-links li a {
-    /* color: #fff; */
     font-size: 40px;
     line-height: 80px;
   }
@@ -188,27 +185,44 @@ a {
 /* hero section */
 
 .herodiv {
-  /* background-color: #00a257; */
-  background: linear-gradient(to bottom, #ffffff 10%, #00a257 100%);
-  height: 100vh;
+  height: 550px;
+}
+.img {
+  height: 71%;
+  width: 93.5%;
+  border-radius: 50px;
+  position: absolute;
 }
 .herodivinner {
-  background-color: white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0px 50px 50px 50px;
   display: flex;
   border-radius: 50px;
 }
+.bookbtn {
+  background-color: #00a257;
+  border: none;
+  padding: 10px;
+  margin-top: 28%;
+  font-family: "Inter";
+  color: white;
+  font-size: 22px;
+}
+.bookbtn:hover {
+  color: #00a257;
+  background-color: white;
+}
 .herdiv2 {
+  position: relative;
   margin: 50px 50px 50px 0;
-  /* height: 100%; */
 }
 .herosubhead {
-  /* margin: 50px; */
-  font-family: "Anton", sans-serif;
-  color: #00a257;
+  position: relative;
+  font-family: "Inter";
+  color: white;
   font-weight: 400;
-  padding-top: 38%;
+  padding-top: 3%;
+  font-size: 22px;
 }
 .herohead {
   font-family: "Anton", sans-serif;
@@ -249,55 +263,54 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
-    .herohead {
-      font-family: "Anton", sans-serif;
-      letter-spacing: 4px;
-      font-weight: 400;
-      line-height: 50px;
-      font-size: 40px;
-      width: 110px;
-      margin: 50px 50px 0 50px;
-      height: 300px;
-      position: relative;
-      color: white;
-      -webkit-text-stroke: 0.1vw #00a257;
-      text-transform: uppercase;
-    }
-    .herohead::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        color: #00a257;
-        -webkit-text-stroke: 0vw #00a257;
-        border-right: 0.5vw solid #00a257;
-        overflow: hidden;
-        animation: animate 2s linear infinite;
-      }
-    .herodivinner {
-        background-color: white;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        margin: 50px 50px 50px 50px;
-        display: flex;
-        border-radius: 50px;
-        flex-direction: column
-      }
-      .herdiv2 {
-        margin: 50px;
-        display: block;
-        flex-direction: column;
-      }
-      .herosubhead {
-        /* margin: 50px; */
-        font-family: "Anton", sans-serif;
-        color: #00a257;
-        font-weight: 400;
-        font-size: 20px;
-        padding-top: 0;
-      }
+  .herohead {
+    font-family: "Anton", sans-serif;
+    letter-spacing: 4px;
+    font-weight: 400;
+    line-height: 50px;
+    font-size: 40px;
+    width: 110px;
+    margin: 50px 50px 0 50px;
+    height: 300px;
+    position: relative;
+    color: white;
+    -webkit-text-stroke: 0.1vw #00a257;
+    text-transform: uppercase;
   }
+  .herohead::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #00a257;
+    -webkit-text-stroke: 0vw #00a257;
+    border-right: 0.5vw solid #00a257;
+    overflow: hidden;
+    animation: animate 2s linear infinite;
+  }
+  .herodivinner {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 50px 50px 50px 50px;
+    display: flex;
+    border-radius: 50px;
+    flex-direction: column;
+  }
+  .herdiv2 {
+    margin: 50px;
+    display: block;
+    flex-direction: column;
+  }
+  .herosubhead {
+    font-family: "Anton", sans-serif;
+    color: #00a257;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 0;
+  }
+}
 
 /* hero ends */
 
@@ -325,12 +338,10 @@ a {
   font-family: "Poppins", sans-serif;
 }
 .cardsbody {
-  /* min-height: 100vh; */
   padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #efefef; */
 }
 .slide-container {
   max-width: 1120px;
